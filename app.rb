@@ -21,10 +21,11 @@ get '/cat2' do
 end
 
 get '/named-cat' do
-  p params[:name]
-  p params[:age]
-  p params
   @name = params[:name]
   @age = params[:age]
   erb(:index)
+end
+
+get '/naming-form' do
+  erb(:naming_form)
 end
